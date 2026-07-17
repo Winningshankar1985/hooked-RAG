@@ -1,5 +1,5 @@
 langchain
-langchain_core
+langchain-core
 langchain-google-genai
 langchain-community
 dotenv
@@ -8,3 +8,6 @@ streamlit
 typing
 langsmith
 tavily
+langchain-classic
+langchain-chroma
+langchain-openai

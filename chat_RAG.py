@@ -21,8 +21,8 @@ from langchain_core.globals import set_debug,set_verbose
 from langchain.tools import tool
 from tavily import TavilyClient
 #--------------------------------- PAGE CONFIG -----------------------------------------
-# set_debug(True)
-# set_verbose(True)
+set_debug(True)
+set_verbose(True)
 
 
 tavily_client=TavilyClient(api_key=os.environ.get("TAVILY_API_KEY"))
@@ -100,7 +100,7 @@ with st.spinner("Loading Resources, Please wait ... "):
      try:    
        
         # llm=ChatGoogleGenerativeAI(model="gemini-3-flash-preview",api_key=os.environ.get("GOOGLE_API_KEY"))
-        llm=ChatOpenAI(model="gpt-4o",api_key=os.environ.get("OPENAI_API_KEY"),temperature=0.2)
+        llm=ChatOpenAI(model="gpt-4o",api_key=os.environ.get("OPENAI_API_KEY"),temperature=0)
        
         prompt=ChatPromptTemplate.from_messages([
             ("system",system_prompt),
